@@ -21,17 +21,7 @@ import {
 import './assets/css/common.css';
 
 import Home from './views/Home.js';
-import VehicleList from './views/VehicleList';
 
-import InsertVehicleData from './views/InsertVehicleData';
-import InsertVehicleType from './views/InsertVehicleType';
-import InsertVehicle from './views/InsertVehicle';
-import UpdateDataProvidingAgreement from './views/UpdateDataProvidingAgreement';
-
-import VehicleTypeList from './views/VehicleTypeList';
-import ManufacturerList from './views/ManufacturerList';
-import UserList from './views/UserList';
-import InsurerList from './views/InsurerList';
 import DriveDataList from './views/DriveDataList';
 
 class App extends Component {
@@ -54,37 +44,10 @@ class App extends Component {
         <Router>
             <div>
                 <Navbar color="dark" dark expand="md">
-                    <NavbarBrand tag={Link} to="/">UBI</NavbarBrand>
+                    <NavbarBrand tag={Link} to="/">보험사</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav navbar>
-                            <NavItem>
-                                <NavLink tag={Link} to="/insertVehicleData" tag={RRNavLink}>차량 데이터 등록</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/insertVehicleType" tag={RRNavLink}>차종 등록</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/insertVehicle" tag={RRNavLink}>차량 등록</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/updateDataProvidingAgreement" tag={RRNavLink}>보험사 정보 제공 동의</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/vehicleList" tag={RRNavLink}>차량 조회</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/userList" tag={RRNavLink}>사용자 조회</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/vehicleTypeList" tag={RRNavLink}>차종 조회</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/manufacturerList" tag={RRNavLink}>제조사 조회</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink tag={Link} to="/insurerList" tag={RRNavLink}>보험사 조회</NavLink>
-                            </NavItem>
                             <NavItem>
                                 <NavLink tag={Link} to="/driveDataList" tag={RRNavLink}>주행데이터 조회</NavLink>
                             </NavItem>
@@ -97,16 +60,6 @@ class App extends Component {
                         <Col>
                             <div className="content">
                                 <Route exact path="/" component={Home} />
-                                <Route path="/vehicleList" component={VehicleList} />
-                                <Route path="/insertVehicleData" component={InsertVehicleData} />
-                                <Route path="/insertVehicleType" component={InsertVehicleType} />
-                                <Route path="/insertVehicle" component={InsertVehicle} />
-                                <Route path="/updateDataProvidingAgreement" component={UpdateDataProvidingAgreement} />
-
-                                <Route path="/userList" component={UserList} />
-                                <Route path="/manufacturerList" component={ManufacturerList} />
-                                <Route path="/vehicleTypeList" component={VehicleTypeList} />
-                                <Route path="/insurerList" component={InsurerList} />
                                 <Route path="/driveDataList" component={DriveDataList} />
                             </div>
                         </Col>
